@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>안전 등하굣길 네비게이션</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- 헤더 영역 -->
+        <header class="app-header">
+            <h1>🛡️ 스쿨존 안전 내비</h1>
+            <p>학생들의 안전한 등하굣길을 함께 만듭니다</p>
+        </header>
+
+        <!-- 메인 네비게이션 카드 -->
+        <main class="nav-card">
+            <div id="status-badge" class="badge badge-normal">운행 준비 완료</div>
+            
+            <div class="info-group">
+                <span class="label">현재 상태</span>
+                <p id="route-info" class="main-message">주행을 시작하려면 아래 버튼을 누르세요.</p>
+            </div>
+
+            <div class="coord-box">
+                <div>위도: <span id="lat-val">-</span></div>
+                <div>경도: <span id="lng-val">-</span></div>
+            </div>
+
+            <!-- 시뮬레이션용 스위치 (개발 및 테스트용) -->
+            <div class="simulation-box">
+                <label for="congestion-toggle">
+                    <input type="checkbox" id="congestion-toggle">
+                    학교 앞 차단기 가동 중 (혼잡 상태 테스트)
+                </label>
+            </div>
+
+            <button id="start-btn" class="btn btn-primary">GPS 안내 시작하기</button>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
